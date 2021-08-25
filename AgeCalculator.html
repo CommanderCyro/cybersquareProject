@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Container
+        {
+            background-color: lightgreen;
+            width: 315px;
+            padding: 45px;
+            border-radius: 15%;
+            margin: auto;
+            margin-top:5% ;
+            border: 5px dashed rgb(51, 255, 51);
+        }
+        #Header{
+            background-color: rgb(72, 230, 72);
+            padding: 20px;
+            
+        }
+        #page{
+            background-color: cyan;
+            padding-bottom: 6%;
+        }
+      
+        #Text{
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+    <div id="Header"><h1 id="Text">AGE CALCULATOR</h1></div>
+
+    <div id="Container">
+        <h1 id="heading">AGE CALCULATOR</h1>
+        <p>Input your date of birth year here</p>
+        <input type="text" name="DateOfBirth" id="year">
+        <p>Input current year here</p>
+        <input type="text" name="CurrentDate" id="CD">
+        <br>
+        <br>
+        <button onclick="Calculator()">Calculate</button>
+        <br>
+        <span id="OutPut"></span>
+    </div>  
+
+
+
+
+</div>  
+
+    <script>
+        function Calculator(){
+        birthYear=Number(document.getElementById("year").value)
+        currentYear = Number(document.getElementById("CD").value)
+        Age=currentYear-birthYear
+        document.getElementById("OutPut").innerHTML="Your age is "+Age;
+        console.log(Age)
+    }
+    </script>
+</body>
+</html>
